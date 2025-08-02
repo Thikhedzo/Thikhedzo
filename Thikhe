@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thasululo Healing and Deliverance Church</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background-color: #4b0082;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://i.postimg.cc/yN2DdPQL/img-2-1741476241091.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #4b0082;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    button {
+      background-color: #4b0082;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #370060;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.postimg.cc/yN2DdPQL/img-2-1741476241091.jpg" alt="Church Logo" class="logo">
+    <h1>Thasululo Healing and Deliverance Church</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#verse">Verse</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 id="greeting"></h2>
+    <p>A Place of Healing, Hope, and Restoration</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Thasululo Healing and Deliverance Church is a spiritual sanctuary focused on healing through faith, worship, and community. Founded on biblical truth, we welcome all people seeking the presence and power of God.</p>
+  </section>
+
+  <section id="services">
+    <h2>Service Times</h2>
+    <ul>
+      <li>Sunday Worship – 09:00 AM</li>
+      <li>Tuesday Prayer Meeting – 18:00 PM</li>
+      <li>Friday Deliverance Night – 18:00 PM</li>
+    </ul>
+  </section>
+
+  <section id="verse">
+    <h2>Today's Word</h2>
+    <button onclick="showVerse()">Get Healing Verse</button>
+    <p id="verseDisplay" style="font-style: italic; color: #4b0082; margin-top: 20px;"></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Thasululo Church. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Greeting based on time
+    const hour = new Date().getHours();
+    const greeting = document.getElementById("greeting");
+    if (hour < 12) {
+      greeting.textContent = "Good Morning!";
+    } else if (hour < 18) {
+      greeting.textContent = "Good Afternoon!";
+    } else {
+      greeting.textContent = "Good Evening!";
+    }
+
+    // Show random verse
+    function showVerse() {
+      const verses = [
+        "Jeremiah 30:17 – 'I will restore you to health and heal your wounds.'",
+        "Isaiah 41:10 – 'Fear not, for I am with you.'",
+        "Matthew 11:28 – 'Come to me, all who are weary, and I will give you rest.'",
+        "Psalm 147:3 – 'He heals the brokenhearted and binds up their wounds.'"
+      ];
+      const verse = verses[Math.floor(Math.random() * verses.length)];
+      document.getElementById("verseDisplay").textContent = verse;
+    }
+  </script>
+
+</body>
+</html>
